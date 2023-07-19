@@ -1,0 +1,380 @@
+* {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+}
+
+:root {
+      --primary-font: "Montserrat", sans-serif;
+      --secondary-font: "Inter", sans-serif;
+
+      /* #region `Font-Size` VARIABLES */
+      --xxs-font: 10px;
+      --xs-font: 12px;
+      --s-font: 14px;
+      --m-font: 16px;
+      --xm-font: 18px;
+      --l-font: 48px;
+      /* #region `Font-Size` VARIABLES */
+
+      /* #region `Color` VARIABLES */
+      --light-text: #e4e5ea;
+      --action-button: #4077f3;
+      --dark-gray: #656566;
+      --black: #0e1014;
+      --gradient-text: linear-gradient(123deg, #fcb045 24.21%, #ff3f78 100%);
+      --gradient-second-text: linear-gradient(
+            90deg,
+            #fcb045 36.99%,
+            #fd1d1d 100%
+      );
+      /* #endregion `Color` VARIABLES */
+
+      font: 400 var(--m-font) / normal var(--primary-font);
+
+      background: url("./assets/bg-full.webp") no-repeat center center fixed;
+      background-color: var(--black);
+      background-size: auto 100%;
+
+      color: var(--light-text);
+}
+
+.main {
+      max-width: 1140px;
+      width: 100%;
+      margin: 0 auto;
+}
+li {
+      list-style: none;
+}
+a {
+      color: var(--light-text);
+      text-decoration: none;
+}
+.colorized-text {
+      font: 900 var(--l-font) / normal var(--secondary-font);
+
+      background-size: 100%;
+      background-repeat: repeat;
+      background-image: var(--gradient-text);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+}
+
+/* #region HEADER */
+.header {
+      margin-top: 46px;
+      height: 73px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      padding-top: 11px;
+}
+.header-left-side {
+      justify-self: start;
+      display: flex;
+      gap: 27px;
+}
+.header-right-side {
+      justify-self: end;
+      display: flex;
+      gap: 47px;
+}
+.logo--image {
+      width: 140px;
+}
+.phone-number {
+      margin-top: 4px;
+      justify-self: center;
+}
+.header-logo {
+      width: 165px;
+      display: flex;
+      flex-direction: column;
+}
+.header-logo--subheader {
+      font: 300 var(--xxs-font) / normal var(--primary-font);
+}
+/* #endregion HEADER */
+
+/* #region NAVIGATION ITEMS */
+.nav-menu {
+      justify-self: end;
+      display: flex;
+      gap: 30px;
+      margin-top: 4px;
+}
+.social-links {
+      align-items: flex-start;
+      margin-top: 4px;
+      display: flex;
+      gap: 30px;
+}
+.nav-menu--item {
+      font-weight: 500;
+      cursor: pointer;
+}
+/* #endregion NAVIGATION ITEMS */
+
+.intro {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: space-between;
+}
+/* #region Main Headline Text */
+.main-headline {
+      margin-top: 90px;
+      font: 900 var(--l-font) / normal var(--secondary-font);
+      width: 365px;
+}
+.main-headline .subheader {
+      margin-top: 30px;
+      width: 275px;
+      display: block;
+      font: 400 var(--xm-font) / normal var(--primary-font);
+}
+/* #endregion Main Headline Text */
+
+/* #region Order Consultation */
+.consultation {
+      margin-top: 105px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+}
+.consultation-header {
+      max-width: 290px;
+      font-family: var(--secondary-font);
+      text-align: right;
+      margin-bottom: 40px;
+}
+.consultation-header .colorized-text {
+      background-image: var(--gradient-second-text);
+      font-size: var(--xm-font);
+      text-transform: uppercase;
+      letter-spacing: 0.9px;
+}
+.consultation-item-list {
+      display: grid;
+      grid-template-columns: 165px 165px;
+      justify-content: end;
+      gap: 36px;
+}
+.consultation-item {
+      text-align: right;
+      letter-spacing: 0.9px;
+      color: var(--light-text);
+}
+.consultation-item h2 {
+      text-align: right;
+      font: 500 var(--xm-font) / normal var(--secondary-font);
+      letter-spacing: 0.9px;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+}
+.consultation-item p {
+      margin-top: 3px;
+      text-align: right;
+      font-family: Montserrat;
+      font-size: var(--m-font);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+}
+.consultation-button {
+      margin-top: 61px;
+      margin-bottom: 69px;
+      cursor: pointer;
+
+      background-color: var(--action-button);
+      color: var(--light-text);
+      outline: none;
+      border: none;
+      height: 61px;
+      width: 262px;
+
+      font: 400 var(--m-font) / normal var(--primary-font);
+      font-weight: 500;
+}
+
+/* #endregion Order Consultation */
+
+/* #region Footer */
+.footer {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      gap: 98px;
+}
+.about-section {
+      margin-top: 55px;
+
+      display: flex;
+      flex-direction: column;
+}
+.section-title {
+      color: var(--dark-gray);
+      font: 700 var(--s-font) / normal var(--secondary-font);
+}
+.section-links .social-links {
+
+      justify-content: flex-end;
+}
+.section-links {
+      margin-top: 20px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 5px 52px;
+      font: 400 var(--m-font) / normal var(--secondary-font);
+      flex-wrap: wrap;
+      max-height: 135px;
+}
+.about-section--last {
+      height: 100%;
+      justify-self: end;
+      text-align: right;
+}
+.about-section--last .section-links {
+      height: 100%;
+      max-height: 203px;
+}
+.copyright-text {
+      color: var(--light-text);
+      font: 400 var(--xs-font) / normal var(--primary-font);
+      margin-top: auto;
+}
+.copyright-text a {
+      text-decoration: underline;
+}
+/* #endregion Footer */
+
+/* #region Additional Items */
+.red-light {
+      position: absolute;
+
+      left: -20%;
+      top: 15%;
+      transform: translate(50%, 50%);
+
+      width: 311px;
+      height: 311px;
+      border-radius: 311px;
+      opacity: 0.5;
+      background: #961a1a;
+      filter: blur(196px);
+}
+.purple-light {
+      position: absolute;
+
+      left: 50%;
+      top: 0%;
+      transform: translate(-50%, -50%);
+
+      border-radius: 259px;
+      opacity: 0.5;
+      background: #833ab4;
+      width: 259px;
+      height: 259px;
+      filter: blur(196px);
+}
+.purple-ball {
+      position: absolute;
+
+      left: 65%;
+      top: 4%;
+      transform: translate(-50%, -50%);
+}
+/* #endregion Additional Items */
+
+@media screen and (max-width: 414px) {
+      :root {
+            /* #region `Font-Size` VARIABLES */
+            --m-font: 14px;
+            --l-font: 36px;
+            /* #region `Font-Size` VARIABLES */
+            background: var(--black);
+      }
+      .intro {
+            background: url("./assets/bg-small.png") no-repeat center center
+                  fixed;
+            background-size: auto 100%;
+      }
+      .header {
+            position: fixed;
+            z-index: 1000;
+            right: 0;
+            left: 0;
+            height: 55px;
+            margin-top: 0;
+            background-color: var(--black);
+            grid-template-columns: auto;
+            justify-content: center;
+            display: grid;
+      }
+      .header-logo,
+      .header-right-side {
+            display: none;
+      }
+      .footer {
+            padding: 15px;
+            margin-top: 41px;
+            gap: 30px;
+            grid-template-columns: auto;
+      }
+      .about-section {
+            margin-top: 0;
+      }
+      .nav-menu--item:last-of-type {
+            display: none;
+      }
+      .intro {
+            padding-left: 15px;
+            padding-bottom: 59px;
+      }
+      .consultation {
+            align-items: start;
+      }
+      .consultation-header {
+            text-align: unset;
+      }
+      .consultation-button {
+            display: none;
+      }
+      .consultation-item p {
+            display: none;
+      }
+      .consultation-item h2::before {
+            background: linear-gradient(90deg, #fcb045 36.99%, #fd1d1d 100%);
+            content: "";
+            display: block;
+            height: 1px;
+            width: 10px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+      }
+      .consultation-item h2 {
+            padding-left: 15px;
+            position: relative;
+            text-align: left;
+      }
+      .section-links {
+            gap: 10px 48px;
+      }
+      .section-links .social-links {
+            justify-content: unset;
+      }
+      .about-section--last {
+            justify-self: unset;
+            text-align: unset;
+            margin-bottom: 60px;
+      }
+      .copyright-text {
+            margin-top: 50px;
+      }
+}
